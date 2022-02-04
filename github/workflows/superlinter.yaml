@@ -1,0 +1,17 @@
+Super -Linter
+
+on:push
+
+jobs
+Super-lint Code base
+runs-on:ubuntu latest
+    
+   step:
+   name cheakout code
+   usesaction?checkout@v2
+   
+   -name: Run Super Linter
+   github/super-linter@v2
+   env:
+      DEFOULT_BRANCH: main
+      GITHUB_ TOKEN:$ {secret,GITHUB_TOKEN} 
